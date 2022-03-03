@@ -15,8 +15,16 @@ function convert_keywordlist_to_keywordrepr(list){
     return KEYWORD_REPR
 }
 
+# TODO: I think we should use it.
+function extract_funcname( text ){
+    gsub("function\s+[A-Za-z0-9_]+\s(", text)
+}
+
 function colorize( text ){
+
+
     gsub(/\{|\}|\[|\]|\(|\)/, BRACKET "&" UI_END, text)
+
     gsub(KEYWORD_REPR, KEYWORD "&" UI_END, text)
     return text
 }
