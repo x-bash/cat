@@ -1,0 +1,9 @@
+___x_cmd_cat_color(){
+    if [ -t 1 ]; then
+        cat "$@"
+        return
+    fi
+
+
+
+}
